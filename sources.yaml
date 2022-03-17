@@ -14,3 +14,11 @@
   search_parameters: ''
   last_sync: null
   comment: ''
+- filename: pdfs.bib
+  search_type: FEED
+  source_name: ISR
+  source_url: pdfs
+  search_parameters:
+  - endpoint: pdfs_directory
+    params: SCOPE path='pdfs' WITH journal='Information Systems Research' AND sub_dir_pattern='volume_number'
+  comment: NA
