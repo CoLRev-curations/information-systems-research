@@ -11,7 +11,9 @@
   search_type: FEED
   source_name: CROSSREF
   source_url: CROSSREF.bib
-  search_parameters: ''
+  search_parameters:
+  - endpoint: crossref
+    params: SCOPE journal_issn='1526-5536'
   last_sync: null
   comment: ''
 - filename: pdfs.bib
