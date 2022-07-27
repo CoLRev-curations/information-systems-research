@@ -13,16 +13,23 @@ class CustomPrepare:
     source_correction_hint = "check with the developer"
     always_apply_changes = True
 
+    additional_title_complementary_materials_keywords = ['acknowledgment of reviewers', 'acknowledgment to reviewers']
+
     def __init__(self, *, SETTINGS):
         self.SETTINGS = from_dict(data_class=DefaultSettings, data=SETTINGS)
 
-    def prepare(cls, PREPARATION, RECORD):
+    def prepare(self, PREPARATION, RECORD):
 
         if "title" in RECORD.data:
-            if any(x == RECORD.data['title'].lower() for x in ScopePrescreenEndpoint.title_complementary_materials_keywords):
+            if any(x == RECORD.data['title'].lower() for x in ScopePrescreenEndpoint.title_complementary_materials_keywords) :
                 RECORD.prescreen_exclude(
                     reason="complementary material"
                 )
+            for k in self.additional_title_complementary_materials_keywords:
+                if k in RECORD.data["title"].lower():
+                    RECORD.prescreen_exclude(
+                        reason="complementary material"
+                    )
 
         return RECORD
 
