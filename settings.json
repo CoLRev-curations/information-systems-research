@@ -71,6 +71,9 @@
                 "similarity": 1.0,
                 "scripts": [
                     {
+                        "endpoint": "prep_exclude_complementary_materials"
+                    },
+                    {
                         "endpoint": "exclude_non_latin_alphabets"
                     },
                     {
@@ -230,12 +233,19 @@
         "same_source_merges": "prevent",
         "scripts": [
             {
-                "endpoint": "active_learning_training"
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/CROSSREF.bib"
             },
             {
-                "endpoint": "active_learning_automated",
-                "merge_threshold": 0.8,
-                "partition_threshold": 0.5
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/DBLP.bib"
+            },
+            {
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/pdfs.bib"
+            },
+            {
+                "endpoint": "curation_missing_dedupe"
             }
         ]
     },
@@ -249,7 +259,7 @@
                 ]
             },
             {
-                "endpoint": "colrev_cli_prescreen"
+                "endpoint": "conditional_prescreen"
             }
         ]
     },
@@ -259,13 +269,7 @@
         "rename_pdfs": true,
         "scripts": [
             {
-                "endpoint": "unpaywall"
-            },
-            {
                 "endpoint": "local_index"
-            },
-            {
-                "endpoint": "website_screenshot"
             }
         ],
         "man_pdf_get_scripts": [
