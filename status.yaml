@@ -1,5 +1,5 @@
 atomic_steps: 17536
-completed_atomic_steps: 7802
+completed_atomic_steps: 6602
 completeness_condition: false
 currently:
   exclusion: {}
