@@ -5,3 +5,5 @@ venv
 .references_learned_settings
 .corrections
 data/pdfs
+data/.tei/
+__pycache__/
