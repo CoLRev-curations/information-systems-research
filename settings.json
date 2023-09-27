@@ -55,7 +55,9 @@
             "search_type": "DB",
             "search_parameters": {
                 "scope": {
-                    "issn": "1526-5536"
+                    "issn": [
+                        "1526-5536"
+                    ]
                 }
             },
             "comment": ""
