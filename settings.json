@@ -158,7 +158,7 @@
         "keep_backup_of_pdfs": true,
         "pdf_prep_package_endpoints": [
             {
-                "endpoint": "colrev.pdf_check_ocr"
+                "endpoint": "colrev.ocrmypdf"
             },
             {
                 "endpoint": "colrev.remove_coverpage"
@@ -167,13 +167,7 @@
                 "endpoint": "colrev.remove_last_page"
             },
             {
-                "endpoint": "colrev.validate_pdf_metadata"
-            },
-            {
-                "endpoint": "colrev.validate_completeness"
-            },
-            {
-                "endpoint": "colrev.create_tei"
+                "endpoint": "colrev.grobid_tei"
             }
         ],
         "pdf_prep_man_package_endpoints": [
