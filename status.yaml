@@ -3,8 +3,8 @@ completed_atomic_steps: 22672
 completeness_condition: false
 currently:
   exclusion: {}
-  md_imported: 2
-  md_needs_manual_preparation: 82
+  md_imported: 0
+  md_needs_manual_preparation: 84
   md_prepared: 0
   md_processed: 0
   md_retrieved: 0
